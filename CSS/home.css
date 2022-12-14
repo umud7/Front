@@ -967,19 +967,19 @@ transition: 0.4s;
   -webkit-transition: opacity 0.3s ease-in-out;
    opacity: 1;
 }
-.manyProducts .row .col:hover .addC {
+.manyProducts .row .col:hover .updateCard {
   color: #FFFFFF;
   text-align: center;
   -webkit-transition: opacity 0.3s ease-in-out;
    opacity: 1;
 }
 
-.manyProducts .row .col:hover .fullScreen{
+.manyProducts .row .col:hover .icon{
   text-align: center;
   -webkit-transition: opacity 0.3s ease-in-out;
    opacity: 1;
 }
-.manyProducts .row .col:hover .heart{
+.manyProducts .row .col:hover .figure{
   text-align: center;
   -webkit-transition: opacity 0.7s ease-in-out;
    opacity: 1;
