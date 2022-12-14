@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<!-- Fonts Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- My Css -->
+    <link rel="stylesheet" href="../Css/blog.css">
+     <!-- Swiper -->
+    <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <title>Home 3 -Bacola - Grocery Market and Food Theme</title>
+</head>
+
+<body>
+  <!-- Seyfenin en ustundeki covid yazisi ve 4dene olan yazi -->
+  <div class="top"> 
+    <div class="header">
+        Due to the COVID 19 epidemic, orders may be processed with a slight delay
+    </div>
+    <div class="heads"style="background-color:white;">
+        <div class="container">
+            <div class="row">
+              <div class="col-4 d-flex justify-content-start">
+                <ul class="d-flex" style="padding-top:8px;">
+                    <li><a href="">About us</a></li>
+                    <li><a href="">My account</a></li>
+                    <li><a href="">Wishlist</a></li>
+                    <li><a href="">Order Tracking</a></li>
+                </ul>
+              </div>
+              <div class="col-4  d-flex justify-content-center" style="padding-left:100px ;">
+                <i class="fa-solid fa-shield-halved" style="margin-top:13px;font-size:17px;"></i>
+                <span style="margin:10px 5px;color: rgb(0, 0, 0);">100% Secure delivery contacting  courier</span>
+              </div>
+              <!-- Seyfedeki diller olan bolme -->
+              <div class="col-4 d-flex justify-content-start">
+                <div class="text-content" style="color:rgb(41, 41, 41) ;padding-top:10px; height: 25px;"><span class="border-start"style="padding-left:20px" >Need help? Call Us: </span> <a style="text-decoration:none;" href="#"><strong style="color: #2bbef9">+0000</strong></a></div>
+                <div class="dropdown border-start"style="padding-left:10px;padding-top:10px; height:44px;">
+                    <button class="dropbtn">English<i class="fa-solid fa-chevron-down" style="font-size:10px;padding-left:5px;"></i></button>
+                    <div class="dropdown-content baku"style="margin-top:15px;">
+                      <a href="#" style="margin-top:15px;">English</a>
+                      <a href="#">Spanish</a>
+                      <a href="#">German</a>
+                  </div>      
+              </div>
+              <!-- Seyfedeki puk meblegleri -->
+              <div class="dropdown"style="padding-right:15px;padding-top:10px;">
+                <button class="dropbtn">USD<i class="fa-solid fa-chevron-down" style="font-size:10px;padding-left:5px;"></i></button>
+                <div class="dropdown-content baku"style="margin-top:15px;">
+                  <a href="#" style="margin-top:15px;">USD</a>
+                  <a href="#">INR</a>
+                  <a href="#">GPB</a>
+              </div>      
+          </div>
+            </div>
+          </div>
+     </div>
+  </div>
+  </div>
+  <div class="nav-container"style="padding:30px 30px 0px 30px;background-color:white;box-shadow: 0px 0.5px 1px 0px rgba(0,0,0,0.2);">
+    <div class="container">
+      <div class="row">
+        <!-- Seyfenin en ustundeki logo bolumu -->
+        <div class="col"style="padding-left:45px;">
+          <a href=""><img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/bacola-logo.png" style="width:164px;height:43.8px;padding-left:5px ;" alt="">
+          <span class="brand-description" style="font-size:11px;color:#afb0b6;font-family:sans-serif;">Online Grocery Shopping Center</span></a>
+        </div>
+<!-- Bootstrap -->
+        <div class="col">
+          <!-- Button trigger modal -->
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"id="location">
+          <span class="location"style="font-size:10px;color:#afb0b6;">Your Location</span>
+          <div class="currentLoc">Select a Location</div>
+          <span><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+          <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"style="width:450px;">
+      <!-- Select location bolmesinin icerisi -->
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-title" id="exampleModalLabel">Choose your Delivery Location</div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <span style="font-size:13px;">Enter you adress and we will specify the offer your area.</span>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="searchModal">
+                  <input type="text"id="modalSearch"placeholder="Searh your area">
+                  <i class="fa-solid fa-magnifying-glass zoom"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Locationdaki seherler bolumu -->
+      <div class="modal-body">
+        <ul style="list-style: none;flex-direction: column; max-height:300px;width: 350px;"class="d-flex justify-content-start align-items-start">
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Select a Location</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Clear All</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Alabama</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $130</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Alaska</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $120</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Arizona</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $150</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">California</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $110</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Colorado</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $140</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Canada</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $140</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Florida</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $160</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Georgia</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $120</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Kansas</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $170</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Minnesota</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $120</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">New York</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $110</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:10px 0px;position: relative;">
+            <a href="" class="modalList" style="color: black;">Washington</a>
+            <a href=""style="font-size:10px;color:gray;position:absolute;right:0px;"><div class="prices" style="min-width:60px;max-width:80px;height: 20px; border-radius: 15px; border: 1px solid rgb(204, 204, 204);display: flex;justify-content: center;align-items: center;">Min: $130</div></a>
+          </li>
+          <li class="d-flex justify-content-start align-items-center border-bottom" style="width:100%;height:40px;margin:20px 0px;position: relative;">
+        
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+      </div>
+
+        </div>
+        <!-- Seyfenin yuxarisindaki search hissesinin iconu -->
+        <div class="col">
+          <div class="search">
+            <input type="text"id="navbarSearch"placeholder="Searh for products...">
+            <i class="fa-solid fa-magnifying-glass zoom"></i>
+          </div>
+        </div>
+    <!-- Sebetin yanindaki user iconu -->
+        <div class="col">
+          <a href=""style="color:gray"><div class="allAccount"><i class="fa-solid fa-user"></i></div></a> 
+        </div>
+      <!-- Sebete hover eledikde acilan pencere -->
+        <div class="col">
+          <div class="count">
+           <a href=""style="color:black"><span class="dollar">$<span class="amount">0.00</span></span></a>
+           <div class="basketBag">
+            <div class="shopBasket" style="display:flex;justify-content: center;align-items: center;flex-direction: column;">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgGQ7_fZ76rLx5eU8NkwsPxQzWY3W3B2O6XQ&usqp=CAU"style="width:125px;height:100px;" alt="">
+             <span class="basketContent" style="font-size:14px;font-weight:600;">No product in the cart</span>
+
+            </div>
+             <div class="pageBasket" style="width:100%;padding:20px;overflow: hidden;">
+              <div class="table" style="width:100%;max-height:260px;overflow-y: scroll;overflow-x: hidden;  scrollbar-width: thin;" id="basketTable">
+                <table id="shopTable" style="border: #f1eeee;">                 
+                </table>
+              </div>
+              <hr style="color:#dcdcdc">
+              <div class="subtotal" style="display:flex;justify-content:space-between;align-items:center;padding:5px 10px;font-size: 17px;font-family: dosis,sans-serif;">
+              </div>
+              
+              <hr>
+              <span class="sale" style="font-size:12px;text-align: center;display: flex;flex-direction: column;align-items: center;justify-content: center;"> We reduce shipping prices to only 2.49$</span>
+            </div>
+            </div> 
+            <div class="basketlogo" style="height:70px;position:absolute;width:100px;">
+            <a href="card.html"class="basketLogo" style="color:rgb(235, 52, 52);margin-left:45px;">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <div class="counter">0</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <div class="container"style="padding-top:10px;background-color:white;max-height:80px;">
+      <div class="row">
+        <div class="col dropdown">
+            <button class="page" style="border:none;background-color:#2bbef9 ;border-radius:25px;width: 214px;height: 50px;" type="button" id="dropdownMenuButton1" >
+              <div class="totalProduct"><span>TOTAL 63 PRODUCTS</span></div>
+              <!-- Burada All categorisi yaziriq -->
+              <i class="fa-solid fa-bars"style="padding:10px;color:white"><span style="padding:10px; font-size:16px;color:white;font-weight:400;font-family: dosis,sans-serif;;">ALL CATEGORIES</span></i><i class="fa-solid fa-chevron-down"style="font-size:13px;color:white"></i>
+            </button>
+            <ul class="allTexts">
+              <!-- All categorisin icerisinin yaziriq -->
+              <li class="nextText"><i class="fa-solid fa-apple-whole"></i><a href="#">Fruits & Vegetables<i class="fa-solid fa-chevron-right" style="margin-left:30px;font-size: 10px;"></i></a>
+              <div class="textMenu">
+                <ul class="nextTexts">
+                  <li><a href="">TEST</a></li>
+                  <li><a href="">TEST</a></li>
+                  <li><a href="">TEST</a></li>
+                  <li><a href="">TEST</a></li>
+                  <li><a href="">TEST</a></li>
+                  <li><a href="">TEST</a></li>
+                  <li><a href="">TEST</a></li>          
+                  </ul>
+              </div>
+            </li>
+              <li><i class="fa-brands fa-apple"></i><a href="#">Fruita & Vegetables</a></li>
+              <li><i class="fa-solid fa-bacon"></i><a href="#">Meats & SeaFoods</a></li>
+              <li><i class="fa-solid fa-egg"></i><a href="#">Breakfast & Dairy</a></li>
+              <li><i class="fa-solid fa-mug-hot"></i><a href="#">Beverages</a></li>
+              <li><i class="fa-solid fa-cookie"></i><a href="#">Breads & Bakery</a></li>
+              <li><i class="fa-solid fa-snowflake"></i><a href="#">Frozen Foods</a></li>
+              <li><i class="fa-solid fa-cookie-bite"></i><a href="#">Biscuits & Snacks</a></li>
+              <li><i class="fa-solid fa-seedling"></i><a href="#">Grocery & Staples</a><hr></li>
+              <li style="margin-top: 10px;"><a href="#"style="color: black;">Value of the Day</a></li>
+              <li><a href="#"style="color: black;">Top 100 Offers</a></li>
+              <li ><a href="#" style="color: black;">New arrivals</a></li>
+            </ul>
+        </div>
+        <!-- Burada home bolumu yaziriq -->
+        <div class="col">
+          <ul class="navbarMenu d-flex"style="padding-top:5px;">
+            <li style="position: relative;">
+              <div class="homes">
+              <button class="home"style="width:100px;height:40px;border-radius:25px;"><span style="height: 100px;">HOME</span><i class="fa-solid fa-chevron-down"style="padding-left:12px;font-size:12px;"></i></button>
+              <ul class="home-content">
+                <li><a href="#">Home 1</a></li>
+                <li><a href="#">Home 2</a></li>
+                <li><a href="#">Home 3</a></li>
+                <li><a href="#">Home 4</a></li>
+                <li><a href="#">Home 5</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <!-- Shop bolumun icerisi -->
+            <div class="shopes">
+              <button class="home"style="width:100px;height:40px;border-radius:25px;border:none;"><span style="height: 100px;">SHOP</span><i class="fa-solid fa-chevron-down"style="padding-left:12px;font-size:12px;"></i></button>
+              <ul class="shope-content">
+                <li><a href="#" style="margin:0px 50px;font-weight: 600;color: #233a95;">Shop List</a>
+                <ul>
+                <li style="padding-top:15px ;"><a href="">Shop Default</a></li>
+                <li><a href="">Shop Right Sidebar</a></li>
+                <li><a href="">Shop Wide</a></li>
+                <li><a href="">List Left Sidebar</a></li>
+                <li><a href="">Load More Button</a></li>
+                <li><a href="">Infinite Scrolling</a></li>
+                </ul>
+            </li>
+               <li><a href="#" style="margin:0px 50px;font-weight: 600;color: #233a95;">Product Details</a>
+                  <ul>
+                    <li style="padding-top:15px ;"><a href="">Product Default</a></li>
+                    <li><a href="">Product Group</a></li>
+                    <li><a href="">Product External</a></li>
+                    <li><a href="">Product Downloadable</a></li>
+                    <li><a href="">Product With Video</a></li>
+                    </ul>
+               </li>
+                <li><a href="#" style="margin:0px 50px;font-weight: 600;color: #233a95;">Product Types</a>
+                  <ul>
+                    <li style="padding-top:15px ;"><a href="">Single Type 1</a></li>
+                    <li><a href="">Single Type 2</a></li>
+                    <li><a href="">Single Type 3</a></li>
+                    <li><a href="">Single Type 4</a></li>
+                    <li><a href="">Thumbnail Left</a></li>
+                    <li><a href="">Zoom Image</a></li>
+                    </ul>
+                  </li>
+                <li><a href="#" style="margin:0px 50px;font-weight: 600;color: #233a95;">Shop Pages</a>
+                  <ul>
+                    <li style="padding-top:15px ;"><a href="">Cart</a></li>
+                    <li><a href="">Checkout</a></li>
+                    <li><a href="">My account</a></li>
+                    <li><a href="">Wishlist</a></li>
+                    <li><a href="">Order Tracking</a></li>
+                    <li><a href="">Order on Whatsapp</a></li>
+                    </ul>
+                  </li>
+                <li><a href="#" style="margin:0px 50px;font-weight: 600;color: #233a95;">Shop Layouts</a>
+                  <ul>
+                    <li style="padding-top:15px ;"><a href="">Two Columns</a></li>
+                    <li><a href="">Three Columns</a></li>
+                    <li><a href="">Three Columns Wide</a></li>
+                    <li><a href="">Four Columns</a></li>
+                    <li><a href="">Four Columns Wide</a></li>
+                    <li><a href="">Five Columns</a></li>
+                    </ul>
+                  </li>
+              </ul>
+            </div>
+        </li>
+        <li>
+          <!-- Navbardaki yazilar ve iconlar -->
+          <div class="dropdown"style="">
+          <button class="dropbtn"style="width:175px;height: 40px;border-radius:25px;"><i class="fa-solid fa-bacon"style="margin-right:5px;font-size:18px;"></i>MEATS & SEAFOOD</button>
+        </li>
+      <li>
+        <div class="dropdown"style="">
+        <button class="dropbtn"style="width:120px;height: 40px;border-radius:25px;"><i class="fa-solid fa-cookie"style="margin-right:5px;font-size:20px;"></i>BAKERY</button>
+      </li>
+    <li>
+      <div class="dropdown"style="">
+      <button class="dropbtn"style="width:120px;height: 40px;border-radius:25px;"><i class="fa-solid fa-mug-hot"style="margin-right:5px;font-size:20px;"></i>BEVERAGES</button>
+    </li>
+  <li>
+    <div class="dropdown"style="">
+    <button class="dropbtn"style="width:100px;height: 40px;border-radius:25px;">BLOG</button>
+  </li>
+  <li>
+  <div class="dropdown"style="">
+  <button class="dropbtn"style="width:100px;height: 40px;border-radius:25px;">CONTACT</button>
+  </li>
+    </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="width:1200px;margin-top: 60px;">
+    <div class="row" style="width:1200px;position: relative;">
+      <div class="col" style="display:flex;justify-content:start;align-items:start;flex-direction:column;min-width:900px;height:1500px;padding-right: 30px;">
+          <div class="blog-1">
+            <div class="image" style="width: 855px;height:600px;object-fit: cover;background-image: url(https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/05/blog-4.jpg);border-radius: 10px;"></div>
+            <div class="blogpage" style="margin-top:20px;">
+              <span class="history"><i style="font-size:13px;color:#00c8ff;margin-right:7px;" class="fa-solid fa-clock-rotate-left"></i><a href="" style="color:#767676">May 3, 2022</a></span>
+              <span class="comments"style="margin-left:7px;"><i class="fa-solid fa-bookmark" style="font-size:13px;color:#00c8ff;margin-right:7px;"></i><a href="" style="color:#767676">Health</a></span>
+              <span class="author"style="margin-left:7px;"><i class="fa-solid fa-link" style="font-size:13px;color:#00c8ff;margin-right:7px;"></i><a href="" style="color:#767676">grocery, quality</a></span>
+            </div> 
+            <div class="blog-text" style="margin-top:5px;font-size:36px;font-family: inter,sans-serif;font-weight:600;">On the other hand we provide denounce with righteous</div>
+            <div class="blog-content" style="margin-top:10px;font-size:15px;font-family: inter,sans-serif;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae iusto ex iste inventore corporis dolor cum ratione illum eius. Id itaque, odio ab quam beatae a officia impedit, ipsum tenetur asperiores blanditiis earum quidem laudantium sapiente voluptates recusandae molestias. Molestiae qui iusto, voluptatem placeat dolores sequi ab laborum architecto iste. Magni soluta voluptates dolores, laborum expedita eaque eligendi veritatis natus!</div>
+            <a href=""><div class="blog-read" style="margin-top:20px;width:113px;height:40px;display: flex;justify-content: center;align-items: center;border-radius: 5px;background-color: #233a95;color: white;font-size: 15px;margin-bottom: 40px;">Read More</div></a>
+          </div>
+          <div class="academy" style="position: absolute;bottom:500px;left:275px;width:250px;height: 40px;display: flex;justify-content: center;align-items: center;">
+            <a href="../Html/blog.html"><i class="fa-solid fa-chevron-left" style="margin-right:20px;color:#262626"></i></a>
+            <a href="../Html/blog.html"><div id="pagetest">1</div></a>
+            <div style="margin-left:20px;color:#262626;width:36px;height:36px;background:#2bbef9;cursor:pointer;border-radius:50%;display: flex;justify-content: center;align-items: center;color:white">2</div>
+          </div>
+      </div>
+
+      <div class="col" style="display:flex;justify-content:start;align-items:flex-start;flex-direction:column;min-width:300px;padding-left: 15px;">
+        <div class="search" style="position: relative;">
+          <input type="text"placeholder="Search..." style="outline:none;border:rgb(200, 200, 200);background:#f3f4f7;border-radius:5px;padding-left:15px;width: 270px;height: 40px;">
+          <i class="fa-solid fa-magnifying-glass" style="position:absolute; top:10px;right:10px;"></i>
+        </div>
+        <div class="popularPosts" style="margin-top:50px;display:flex;justify-content:center;flex-direction:column;">
+          <span style="font-size:15px;font-family:dosis,sans-serif;margin-bottom:20px;">POPULAR POSTS</span>
+          <div class="popularPosts" style="border:1px solid rgb(235, 235, 235);width:270px;height:311px;border-radius:5px; display: flex;flex-direction: column;padding:20px;">
+            <div class="col" style="display:flex;">
+              <div class="image" style="margin-right:15px;width: 60px;height: 60px;position: relative;">
+                <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/05/blog-3.jpg" alt="" srcset="" style="object-fit:cover; width: 100%;height: 100%;border-radius:50%;">
+                <div class="notif" style="width:24px;height:24px;background:#2bbef9;border-radius: 50%;color: white;display: flex;justify-content: center;align-items: center;top:2px;right:-5px;position: absolute;border: 1px solid white;font-size:12px;font-weight:600;">1</div>
+              </div>
+              <div class="textArea" style="width: 153px;font-size:14px;font-family:inter,sans-serif;font-weight:500;">But I must explain to you how all this mistaken idea</div>
+            </div>
+            <div class="col" style="display:flex;">
+              <div class="image" style="margin-right:15px;width: 60px;height: 60px;position: relative;">
+                <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/05/blog-5.jpg" alt="" srcset="" style="object-fit:cover; width: 100%;height: 100%;border-radius:50%;">
+                <div class="notif" style="width:24px;height:24px;background:#2bbef9;border-radius: 50%;color: white;display: flex;justify-content: center;align-items: center;top:2px;right:-5px;position: absolute;border: 1px solid white;font-size:12px;font-weight:600;">2</div>
+              </div>
+              <div class="textArea" style="width: 153px;font-size:14px;font-family:inter,sans-serif;font-weight:500;">The Problem With Typefaces on the Web</div>
+            </div>
+            <div class="col" style="display:flex;">
+              <div class="image" style="margin-right:15px;width: 60px;height: 60px;position: relative;">
+                <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/05/blog-1.jpg" alt="" srcset="" style="object-fit:cover; width: 100%;height: 100%;border-radius:50%;">
+                <div class="notif" style="width:24px;height:24px;background:#2bbef9;border-radius: 50%;color: white;display: flex;justify-content: center;align-items: center;top:2px;right:-5px;position: absolute;border: 1px solid white;font-size:12px;font-weight:600;">3</div>
+              </div>
+              <div class="textLabel" style="width: 153px;font-size:14px;font-family:inter,sans-serif;font-weight:500;">English Breakfast Tea With Tasty Donut Desserts</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="socialMedia" style="margin-top:50px;display:flex;justify-content:center;flex-direction:column;">
+          <div class="social" style="width:270px;height:311px; display: flex;flex-direction: column;padding:15px 0px;">
+            <span style="font-size:15px;font-family:dosis,sans-serif;margin-bottom:20px;">SOCIAL MEDIA</span>
+            <div class="col" style="display:flex;">
+              <div class="network" style="padding:0px 15px;width: 270px;height: 42px;position: relative;display: flex; align-items: center;justify-content: flex-start;border-radius: 5px;background-color: #3b5998;color: white;font-size: 12px;font-family: dosis,sans-serif;font-weight: 500;">
+                <i class="fa-brands fa-facebook-f"></i>
+                <span style="margin-left:25px;"> <a href="https://www.facebook.com/">FACEBOOK</a></span>
+            </div>
+          </div>
+          <div class="col" style="display:flex;">
+            <div class="media" style="padding:0px 15px;width: 270px;height: 42px;position: relative;display: flex; align-items: center;justify-content: flex-start;border-radius: 5px;background-color: #1DA1F2;color: white;font-size: 12px;font-family: dosis,sans-serif;font-weight: 500;">
+              <i class="fa-brands fa-twitter"></i>
+              <span style="margin-left:25px;"><a href="https://twitter.com/">TWITTER</a></span>
+            </div>
+          </div>
+          <div class="col" style="display:flex;">
+            <div class="media" style="padding:0px 15px;width: 270px;height: 42px;position: relative;display: flex; align-items: center;justify-content: flex-start;border-radius: 5px;background-color: #E60023;color: white;font-size: 12px;font-family: dosis,sans-serif;font-weight: 500;">
+              <i class="fa-brands fa-pinterest-p"></i>
+              <span style="margin-left:25px;"><a href="https://www.pinterest.com/">PINTEREST</a></span>
+            </div>
+          </div>
+          <div class="col" style="display:flex;">
+            <div class="media" style="padding:0px 15px;width: 270px;height: 42px;position: relative;display: flex; align-items: center;justify-content: flex-start;border-radius: 5px;background-color: #0077B5;color: white;font-size: 12px;font-family: dosis,sans-serif;font-weight: 500;">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span style="margin-left:25px;"><a href="https://www.linkedin.com/">LINKEDIN</a></span>
+            </div>
+          </div>
+          <div class="col" style="display:flex;">
+            <div class="media" style="padding:0px 15px;width: 270px;height: 42px;position: relative;display: flex; align-items: center;justify-content: flex-start;border-radius: 5px;background-color: #FF4500;color: white;font-size: 12px;font-family: dosis,sans-serif;font-weight: 500;">
+              <i class="fa-brands fa-reddit-alien"></i>
+              <span style="margin-left:25px;"><a href="https://www.reddit.com/">REDDIT</a></span>
+              </div>
+            </div>
+      </div>
+    </div>  
+      <div class="gifBanner" style="margin-top:30px;display:flex;justify-content:center;flex-direction:column;">
+        <span style="font-size:15px;font-family:dosis,sans-serif;margin-bottom:20px;">WIDGET BANNER</span>
+        <img width="1280" height="1750" src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/sidebar-banner.gif" class="image wp-image-1184 attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;">
+      </div>
+
+      <div class="tags" style="margin-top:30px;display:flex;justify-content:center;flex-direction:column;">
+        <span style="font-size:15px;font-family:dosis,sans-serif;margin-bottom:20px;">TAGS</span>
+        <div class="mediaTag" style="display:flex;width: 270px;height: 150px; flex-wrap: wrap;">
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">envato</div></a>  
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">food</div></a>
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">fresh</div></a>
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">envato</div></a>
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">grocery</div></a>
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">organic</div></a>
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">quality</div></a>
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:5px;margin-bottom:5px;">store</div></a>
+        <a href="" style="color:#262626"><div class="tag" style="padding:5px 15px; border: 1px solid rgb(205, 205, 205);border-radius:2px;margin-right:1px;margin-bottom:5px;">themeforest</div></a>
+      </div>
+  </div>
+  </div>
+</div>
+</div>
+
+  <!-- Footer hissesini yaziriq -->
+<footer>
+    <div class="discount-background">
+        <div class="discount-location">
+            <div class="discount-desc">
+                <h5>$20 discount for your first order</h5>
+                <h3>Join our newsletter and get...</h3>
+                <div class="join-desc">
+                    <h1>Join our email subscription now to get updates</h1>
+                    <h2>on promotions and coupons.</h2>
+                </div>
+                <form class="discount-email" action="">
+                    <input type="email" name="" style="font-family:Arial, FontAwesome" placeholder="&#xf0e0 &#160; Your email address" id="" class="email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="img-discount">
+                <img src="https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/04/coupon.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Footer iconlari -->
+    <div class="footer-backgroundd"></div>
+    <div class="footer-background">
+    <div class="container discount-menu">
+        <h5><i class="fa-solid fa-martini-glass-citrus"></i>&#160;&#160;Everyday fresh products</h5>
+        <div></div>
+        <h5><i class="fa-solid fa-truck-fast"></i>&#160;&#160;Free delivery for order over $70</h5>
+        <div></div>
+        <h5><i class="fa-solid fa-percent"></i>&#160;&#160;Daily Mega Discounts</h5>
+        <div></div>
+        <h5><i class="fa-solid fa-dollar-sign"></i>&#160;&#160;Best price on the market</h5>
+    </div>
+    <div class="container line-1"></div>
+    <!-- Footerdaki mehsullar -->
+        <div class="container bacola-menu">
+            <ul><h5>FRUIT & VEGETABLES</h5>
+                <div>
+                    <li>Fresh Vegetables</li>
+                    <li>Herbs & Seasonings</li>
+                    <li>Fresh Fruits</li>
+                    <li>Cuts & Sprouts</li>
+                    <li>Exotic Fruits & Veggies</li>
+                    <li>Packaged Produce</li>
+                    <li>Party Trays</li>
+                </div>
+            </ul>
+            <ul><h5>BREAKFAST & DAIRY</h5>
+                <div>
+                    <li>Milk & Flavoured Milk</li>
+                    <li>Butter and Margarine</li>
+                    <li>Cheese</li>
+                    <li>Eggs Substitutes</li>
+                    <li>Honey</li>
+                    <li>Marmalades</li>
+                    <li>Sour Cream and Dips</li>
+                    <li>Yogurt</li>
+                </div>
+            </ul>
+            <ul><h5>MEAT & SEAFOOD</h5>
+                <div>
+                    <li>Breakfast Sausage</li>
+                    <li>Dinner Sausage</li>
+                    <li>Beef</li>
+                    <li>Chicken</li>
+                    <li>Sliced Deli Meat</li>
+                    <li>Shrimp</li>
+                    <li>Wild Caught Fillets</li>
+                    <li>Crab and Shellfish</li>
+                    <li>Farm Raised Fillets</li>
+                </div>
+            </ul>
+            <ul><h5>BEVERAGES</h5>
+                <div>
+                    <li>Water</li>
+                    <li>Sparkling Water</li>
+                    <li>Soda & Pop</li>
+                    <li>Coffee</li>
+                    <li>Milk & Plant-Based Milk</li>
+                    <li>Tea & Kombucha</li>
+                    <li>Drink Boxes & Pouches</li>
+                    <li>Craft Beer</li>
+                    <li>Wine</li>
+                </div>
+            </ul>
+            <ul><h5>BREADS & BAKERY</h5>
+                <div>
+                    <li>Milk & Flavoured Milk</li>
+                    <li>Butter and Margarine</li>
+                    <li>Cheese</li>
+                    <li>Eggs Substitutes</li>
+                    <li>Honey</li>
+                    <li>Marmalades</li>
+                    <li>Sour Cream and Dips</li>
+                    <li>Yogurt</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- Footer contact -->
+    <div class="container last-footer">
+        <div class="social-location">
+            <div class="social-footer">
+                <div class="icon-phone-footer">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="social-number">
+                    <h5>8 800 555-55</h5>
+                    <h4>Working 8:00 - 22:00</h4>
+                </div>
+            </div>
+            <!-- Footer uygulamalar -->
+            <div class="app-mobile">
+                <DIV class="footer-download-mobile-font">
+                    <h5>Download App on Mobile :</h5>
+                    <h4>15% discount on your first purchase</h4>
+                </DIV>
+                <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/google-play.png" alt="app">
+                <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/app-store.png" alt="app">
+                <!-- Footer social media -->
+                <div class="footer-social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="footer-social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="footer-social-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Footerin Footeri yeni son!!! -->
+        <div class="bacola-footer-desc">
+            <div class="bacola-desc-1">
+                <h5>Copyright 2022 © Bacola WordPress Theme. All rights reserved. Powered by KlbTheme.</h5>
+            </div>
+            <div class="bacola-desc-2">
+                <h5>Privacy Policy</h5>
+                <h5>Terms and Conditions</h5>
+                <h5>Cookie</h5>
+                <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/payments.jpg" alt="payment">
+            </div>
+        </div>
+    </div>
+    </div>
+    </footer>
+    
+    </div>
+    </body>
+        <!-- Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Jquery Cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- My Js -->
+</html>

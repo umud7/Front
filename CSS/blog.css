@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&family=Spline+Sans+Mono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: #ffffff;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+/* About,wislis bollumu */
+li{
+  list-style: none;
+}
+/* Covid 19 hissesi */
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background: #233a95;
+    color: white;
+    font-size: 13px;
+}
+/* Li-nin icerisi */
+.heads{
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgba(128, 128, 128, 0.404);
+    color: rgb(133, 133, 133);
+    font-size: 13px;
+}
+
+.heads ul li{
+    list-style: none;
+    display: flex;
+    align-self:center;
+}
+
+.heads ul li a{
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    margin: 2px 7px;
+    transition: 0.3s;
+}
+.heads ul li a:hover{
+    color: #00c8ff;
+}
+/* Diller ve valyuta hissesi */
+.dropbtn {
+    color: rgb(0, 0, 0);
+    border: none;
+    background: none;
+    transition: 0.3s;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 25px;
+    max-height: 70px;
+  }
+  
+  .dropdown-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    left: -20px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 3;
+  }
+  /* Dillerin icerisi */
+  .baku a {
+    color: rgb(41, 41, 41);
+    padding: 6px 35px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+    font-size: 12px;
+    font-weight: 600;
+
+  }
+  /* Click etdikde asagiya surusmesi */
+  .dropdown-content a:hover {color: #00c8ff;}
+  
+  .dropdown:hover .dropdown-content {
+    
+  -webkit-transition: opacity 0.2s ease-in-out;
+  width: 100px;
+  height: 125px;
+  opacity: 1;
+  }
+
+  .dropbtn:hover{color:#00c8ff;}
+
+/* Burada location mentiqini yaziriq */
+  #location{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left:50px ;
+    width: 180px;
+    height: 60px;
+    border: 1px solid rgb(224, 224, 224);
+    box-shadow: 0px 4px 8px 0px rgba(143, 143, 143, 0.2);
+  }
+  #location span i{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 10px;
+  }
+
+  #location .currentLoc{
+    color: #233a95;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+#location:hover{
+  box-shadow: 0px 4px 8px 0px rgba(57, 57, 57, 0.2);
+}
+/* Burada seyfenin yuxarisindaki search bolumu */
+.search #navbarSearch{
+  position: relative;
+  padding: 18px 10px;
+  width: 553px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f3f4f7;
+  outline: none;
+}
+.search{
+position: relative;
+}
+/* searchin iconu */
+.search .zoom{
+position: absolute;
+top: 18px;
+right: 20px;
+font-size: 25px;
+color: rgb(49, 49, 49);
+}
+
+.searchModal #modalSearch{
+  position: relative;
+  margin-top: 25px;
+  padding: 18px 38px;
+  width: 360px;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f3f4f7;
+  font-weight: 100;
+}
+.searchModal .zoom{
+position: absolute;
+top: 65px;
+left: 20px;
+font-size: 20px;
+color: rgb(52, 52, 52);
+}
+/* Sebetin yanindaki user iconu */
+.allAccount{
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+/* Sebetin icerisi */
+.count{
+  position: relative;
+  display: flex;
+  left: -45px;
+}
+/* Sebetin daxilindeki valyuta */
+.count .dollar{
+  position: relative;
+  top: 12px;
+  left: -15px;
+  font-family:"Dosis",sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+/* Sebet mentiqi */
+.basketBag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  position: absolute;
+  width: 0px;
+  max-width: 0px;
+  max-height: 0px;
+  min-height: 0px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 8px 0px rgba(57, 57, 57, 0.2);
+  border-radius: 10px;
+  top: 65px;
+  left: -160px;
+  z-index: 4;
+  opacity: 0;
+
+}
+/* qiymete hover eledikde acilan sebet pencere */
+.count:hover .basketBag{
+
+  -webkit-transition: opacity 0.2s ease-in-out;
+  width: 300px;
+  max-width: 350px;
+  max-height: 550px;
+  min-height: 250px;
+  opacity: 1;
+}
+/* Sebetin iconuna hover eledikde acilan sebet penceresi */
+.basketLogo:hover .basketBag{
+
+  -webkit-transition: opacity 0.2s ease-in-out;
+  width: 300px;
+  max-width: 350px;
+  max-height: 600px;
+  min-height: 250px;
+  opacity: 1;
+}
+
+/* Burada sebetin logosunu yaziriq */
+.basketLogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 3px;
+  margin-left: 10px;  
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgb(250, 226, 226);
+}
+.basketLogo i{
+ position: relative;
+ left:8.5px;
+}
+.basketLogo .counter{
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top:-10px;
+  right: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* Yene location hissesindeki seherler gelnede yaranan scrol */
+.modal-body{
+  width: 420px;
+  overflow-y: scroll;
+}
+.modal-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* delivery location textini css kodu */
+.modal-title{
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+  left: -65px;
+  margin: 15px;
+}
+.modal-header .container{
+  position: relative;
+}
+
+/* All categorisin icerisindeki css kodlari */
+.allTexts{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 35px;
+  line-height: 35px;
+  top: 70px;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  z-index: 3;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* Mehsullarin icerisi */
+.nextText{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 35px;
+  line-height: 35px;
+  top: 70px;
+  left:275px ;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  z-index: 3;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+/* Link verilmis formalari */
+.allTexts a{
+  font-family: "inter",sans-serif;
+  font-size: 13px;
+  color: #747b93;
+  transition: 0.2s;
+}
+.allTexts a:hover{
+color:#00c8ff
+}
+.allTexts i{
+  margin-right: 10px;
+}
+.nextText:hover .textMenu .nextTexts{
+  -webkit-transition: height 0.3s ease-out;
+  width: 268px;
+  height: 517px;
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown:hover .allTexts{
+  -webkit-transition: height 0.3s ease-out;
+  width: 268px;
+  height: 517px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.categor i span{
+  font-family:"Dosis",sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.totalProduct{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  width: 101px;
+  height: 18px;
+  background-color:#f3f4f7;
+  border: 1px solid white;
+  border-radius: 25px;
+}
+.totalProduct span{
+  font-family:"Dosis",sans-serif;
+  font-size:10px;
+  color: #2c2c2c;
+}
+/* Navbar bolumunun css kodlari */
+.navbarMenu{
+  font-family:"Dosis",sans-serif;
+  color: #2c2c2c;
+}
+  
+.navbarMenu .home:hover{
+background-color: #f3f4f7;
+transition: 0.4s;
+}
+
+.home{
+  display: block;
+  color: rgb(59, 59, 59);
+  border: none;
+  background-color: #ffffff;
+}
+
+
+.home-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  width:0;
+  height:0;
+  margin-top:16px;
+  padding: 0;
+  position: absolute;
+  left: -55px;
+  top: 49px;
+  background-color: white;
+  z-index: 3;
+  transition:height 0.5s ease-in-out;
+  transition-delay: 1ms;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0;
+  border-radius: 5px;
+  border: 1px solid rgb(228, 228, 228);
+  line-height: 40px;
+  overflow: hidden;
+
+}
+
+.shope-content{
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction:row;
+  visibility: hidden;
+  width:0;
+  height:0;
+  margin-top:16px;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 241px;
+  background-color: white;
+  z-index: 3;
+  transition:height 0.5s ease-in-out;
+  transition-delay: 0ms;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0;
+  border-radius: 5px;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  padding: 30px 174px 30px;
+  font-size: 13px;
+  font-family: "inter",sans-serif;
+}
+
+.shope-content li{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.shope-content li a{
+  color: #717171;
+  font-weight: 500;
+}
+
+.shope-content a{
+  transition: 0.3s;
+}
+.homes{
+  width: 100px;
+  height: 75px;
+  padding-bottom: -500px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.shopes{
+  width: 100px;
+  height: 75px;
+  padding-bottom: -500px;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.home-content a {
+  padding: 6px 35px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-family:"Dosis",sans-serif;
+  color: #525252;
+  padding-left: -50px;
+}
+.home-content a:hover{
+  color: #00c8ff;
+}
+.shope-content a:hover{
+  color: #00c8ff;
+}
+.homes:hover .home{
+  color: #2bbef9;
+  background-color: #f0f6ff;
+}
+.shopes:hover .home{
+    color: #2bbef9;
+    background-color: #f0f6ff;
+  
+}
+.shopes:hover .shope-content{
+  -webkit-transition: opacity 0.2s ease-in-out;
+  visibility: visible;
+   opacity: 1;
+   width: 100%;
+   height: 320px;
+}
+.homes:hover .home-content{
+
+  -webkit-transition: opacity 0.2s ease-in-out;
+   opacity: 1;
+   height: 220px;
+   width: 200px;
+}
+
+
+
+/* Buradan footer bolumunu yaziriq */
+footer .discount-background {
+    width: 100%;
+  }
+  
+  footer .discount-background .discount-location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 110px;
+    width: 100%;
+    height: 330px;
+    padding-left: 170px;
+    background-color: #233A95;
+  }
+   footer .discount-background .discount-location .discount-desc {
+    width: 470px;
+    height: 100%;
+    padding-top: 40px;
+  }
+  
+   footer .discount-background .discount-location .discount-desc h5 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  
+   footer .discount-background .discount-location .discount-desc h3 {
+    color: #ffffff;
+    font-size: 26px;
+  }
+  
+   footer .discount-background .discount-location .discount-desc .join-desc {
+    margin-top: 20px;
+  }
+  
+   footer .discount-background .discount-location .discount-desc .join-desc h1 {
+    font-size: 13px;
+    color: #71778e;
+  }
+  
+   footer .discount-background .discount-location .discount-desc .join-desc h2 {
+    font-size: 13px;
+    color: #71778e;
+    margin-top: -7px;
+  }
+  /* Burada search bolumundeki email buttonunu yaziriq */
+   footer .discount-background .discount-location .discount-desc .discount-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 100%;
+    margin-top: 40px;
+  }
+  
+   footer .discount-background .discount-location .discount-desc .discount-email .email {
+    border: solid 1px #f3f4f7;
+    border-radius: 5px;
+    height: 60px;
+    width: 100%;
+    background-color: #f3f4f7;
+    padding-left: 15px;
+    font-size: 15px;
+  }
+  
+   footer .discount-background .discount-location .discount-desc .discount-email .fa-solid {
+    position: absolute;
+    font-size: 25px;
+    left: 500px;
+    top: 19px;
+  }
+  
+   footer .discount-background .discount-location .discount-desc .discount-email button {
+    width: 120px;
+    border: none;
+    border-radius: 4px;
+    height: 50px;
+    background-color: #233A95;
+    margin-left: -125px;
+    margin-top: 5px;
+    color: white;
+  }
+  /* Bonus cartinin seklini yaziriq */
+   footer .discount-background .discount-location .img-discount {
+    width: 510px;
+    height: 277px;
+    margin-left: 200px;
+    margin-top: 53px;
+  }
+  
+   footer .footer-backgroundd {
+    height: 20px;
+    width: 100%;
+    background-color: #f7f8fd;
+  }
+  /* Burada footurdaki iconlari yaziriq */
+   footer .discount-menu {
+    margin-top: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: flex;
+    width: 1100px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+   footer .discount-menu div {
+    opacity: 0.2;
+    height: 35px;
+    width: 1px;
+    background-color: #71778e;
+  }
+   footer .discount-menu h5 {
+    font-size: 13px;
+    color: black;
+  }
+  
+  footer .footer-background {
+    background-color: #f7f8fd;
+    margin-top: -30px;
+    height: 550px;
+  }
+  /* Burada footerdeki mehsullari qeyd edirik */
+   footer .line-1 {
+    height: 1px;
+    width: 1150px;
+    background-color: #71778e;
+    opacity: 0.2;
+    margin-top: 25px;
+  }
+  
+   footer .bacola-menu {
+    margin-top: 100px;
+    width: 1200px;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+   footer .bacola-menu ul h5 {
+    font-size: 25px;
+    color: #202435;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  
+   footer .bacola-menu ul li {
+    cursor: pointer;
+    list-style-type: none;
+    color: #555a6c;
+    font-size: 13px;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  
+   footer .last-footer {
+    margin-top: 15px;
+    height: 100px;
+    width: 1175px;
+  }
+  /* Buradan uje footerdeki contact bolumunu qeyd edirik */
+   footer .last-footer .social-location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px;
+  }
+  
+   footer .last-footer .social-location .social-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 180px;
+  }
+  
+   footer .last-footer .social-location .social-footer .icon-phone-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: solid 1px #71778e;
+  }
+  
+   footer .last-footer .social-location .social-footer .icon-phone-footer i {
+    color: #71778e;
+  }
+  
+   footer .last-footer .social-location .social-footer .social-number h5 {
+    font-size: 20px;
+    color: #202435;
+  }
+  
+   footer .last-footer .social-location .social-footer .social-number h4 {
+    font-size: 11px;
+    opacity: 0.7;
+    color: #202435;
+    position: relative;
+    top: -5px;
+    font-weight: 600;
+  }
+  
+   footer .last-footer .social-location .app-mobile {
+    width: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /* Buradanda sosial media iconlari ve imgleri qeyd edirik */
+   footer .last-footer .social-location .app-mobile .footer-social-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 1px #71778e;
+    cursor: pointer;
+    color: #233A95;
+  }
+  
+   footer .last-footer .social-location .app-mobile .footer-social-icon i {
+    font-size: 15px;
+  }
+  
+   footer .last-footer .social-location .app-mobile img {
+    cursor: pointer;
+    width: 116px;
+    height: 36px;
+  }
+  
+   footer .last-footer .social-location .app-mobile .footer-download-mobile-font h5 {
+    font-size: 14px;
+    color: #202435;
+  }
+  
+   footer .last-footer .social-location .app-mobile .footer-download-mobile-font h4 {
+    font-size: 12px;
+    opacity: 0.7;
+    color: #202435;
+    position: relative;
+    top: -5px;
+    font-weight: 600;
+  }
+  /* Foturun altini yaziriq burda */
+   footer .last-footer .bacola-footer-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80px;
+    margin-top: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+   footer .last-footer .bacola-footer-desc .bacola-desc-1 {
+    padding-left: 20px;
+  }
+  
+   footer .last-footer .bacola-footer-desc .bacola-desc-1 h5 {
+    font-size: 12px;
+    color: #9b9bb4;
+    font-weight: 600;
+  }
+  
+   footer .last-footer .bacola-footer-desc .bacola-desc-2 {
+   
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 600px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+   footer .last-footer .bacola-footer-desc .bacola-desc-2 h5 {
+    font-size: 12px;
+    color: #9b9bb4;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+   footer .last-footer .bacola-footer-desc .bacola-desc-2 h5:hover {
+    text-decoration: underline;
+  }
+  
+   footer .last-footer .bacola-footer-desc .bacola-desc-2 img {
+    cursor: pointer;
+   }
+  
