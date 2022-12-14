@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- My Css -->
-    <link rel="stylesheet" href="../Css/login.css">
+    <link rel="stylesheet" href="../Css/contact.css">
      <!-- Swiper -->
     <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
@@ -350,69 +350,81 @@ integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd
       </div>
     </div>
   </div>
-  <!-- Form -->
-
-  <section class="registr">
+<!-- Card hissesi -->
+  <section class="contact-card">
     <div class="container">
-        <div class="parent-registr">
-            <div class="registr-box">
-                <h2 >Login</h2>
-                <form class="form" action="/Html/Home.html">
-                    <p class="username-email">
-                        <label for="username">Username or email address *</label><br>
-                        <input type="text" id="username" name="username" required >
-                    </p>
 
-                    <p class="password">
-                        <label for="password">Password</label><br>
-                        <input type="text" id="password" name="password" required >
-                    </p>
+        <div class="card-text">
+            <h1>Get In Touch</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quaerat unde quam dolor culpa veritatis inventore, aut commodi eum veniam vel.</p>
 
-                    <p class="check-button">
-                        <div class="check">
-                            <input type="checkbox" id="check" name="check">
-                            <label style="font-size: 14px; margin-left: 5px; font-weight: 400;" class="label-check" for="check" >Remember me</label>
-                        </div>
-
-                        <div class="button">
-                            <a href="Home.html">Log in</a>
-                        </div>
-                    </p>
-                    <a href="Home.html">Lost your password?</a>
-
-                </form>
+        </div>
+        <div class="contact-boxs">
+            <div class="box">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h6>102 Street 2714 Donovan</h6>
+                <p>Lorem ipsum dolar site amet discont</p>
             </div>
 
+            <div class="box">
+                <i class="bi bi-telephone-forward"></i>
+                <h6>+02 1234 567 88</h6>
+                <p>Lorem ipsum dolar site amet discont</p>
+            </div>
 
-            <div  class="registr-box">
-                <h2 >REGISTER</h2>
-                <form class="form" action="Home.html">
-                    <p class="username-email">
-                        <label for="username-registr">Username or email address *</label><br>
-                        <input type="text" id="username-registr" name="username-registr" required >
-                    </p>
-                    <p class="password">
-                        <label for="password-registr">Password</label><br>
-                        <input type="text" id="password-registr" name="password-registr" required >
-                    </p>
-                    <p class="paragraph">
-                        Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span>privacy policy</span> .
-                    </p>
-                    <div class="button">
-                        <a href="Home.html">Register</a>
-                    </div>                 
-
-                </form>
+            <div class="box">
+                <i class="bi bi-envelope"></i>
+                <h6>info@example.com</h6>
+                <p>Lorem ipsum dolar site amet discont</p>
             </div>
         </div>
+
     </div>
    
 </section>
-  
+<!-- Form hissesi -->
+<section class="send">
+    <div class="container ">
+        <div class="asus">
+            <div class="code">
+                <h1>Send Us</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quaerat unde quam dolor culpa veritatis<br> inventore, aut commodi eum veniam vel.</p>
+            </div>
+
+            <form class="form">
+                <div class="name-email">
+                    <div class="name">
+                        <label for="name">Your name *</label><br>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="email">
+                        <label for="email">Your email *</label><br>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+
+                <p class="subject">
+                    <label for="subject">Subject *</label><br>
+                    <input type="text" id="subject" name="subject" required>
+                </p>
+                <p>
+                    <label class="text" for="your-message">Your message</labels><br>
+                    <textarea name="your-message" cols="40" rows="10" class="textarea" aria-invalid="false"></textarea>
+                </p>
+                <div class="button">
+                    <a href="#"> Send Message</a>
+                </div>
+                
+
+            </form>
+        </div>
+       
+    </div>
+</section>
 
 
-  <!-- Footer bolumu -->
-<footer>
+<!-- Footer hissesini yaziriq -->
+  <footer>
     <div class="discount-background">
         <div class="discount-location">
             <div class="discount-desc">
@@ -560,12 +572,12 @@ integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd
     
     </div>
     </body>
-    <!-- Swiper -->
+        <!-- Swiper -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Jquery Cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- My Js -->
-<script src="../Js/login.js"></script>
+<script src="../Js/contact.js"></script>
     </html>
