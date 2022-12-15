@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&family=Spline+Sans+Mono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: #ffffff;
+}
+a{
+  text-decoration: none;
+}
+/* About,wislis bollumu */
+li{
+  list-style: none;
+}
+/* Covid 19 hissesi */
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background: #233a95;
+    color: white;
+    font-size: 13px;
+}
+/* Li-nin icerisi */
+.heads{
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgba(128, 128, 128, 0.404);
+    color: rgb(133, 133, 133);
+    font-size: 13px;
+}
+
+.heads ul li{
+    list-style: none;
+    display: flex;
+    align-self:center;
+}
+
+.heads ul li a{
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    margin: 2px 7px;
+    transition: 0.3s;
+}
+.heads ul li a:hover{
+    color: #00c8ff;
+}
+/* Diller ve valyuta hissesi */
+.dropbtn {
+    color: rgb(0, 0, 0);
+    border: none;
+    background: none;
+    transition: 0.3s;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 25px;
+    max-height: 70px;
+  }
+  
+  .dropdown-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    left: -20px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 3;
+  }
+  /* Dillerin icerisi */
+  .baku a {
+    color: rgb(41, 41, 41);
+    padding: 6px 35px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+    font-size: 12px;
+    font-weight: 600;
+
+  }
+  /* Click etdikde asagiya surusmesi */
+  .dropdown-content a:hover {color: #00c8ff;}
+  
+  .dropdown:hover .dropdown-content {
+    
+  -webkit-transition: opacity 0.2s ease-in-out;
+  width: 100px;
+  height: 125px;
+  opacity: 1;
+  }
+
+  .dropbtn:hover{color:#00c8ff;}
+
+/* Burada location mentiqini yaziriq */
+  #location{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left:50px ;
+    width: 180px;
+    height: 60px;
+    border: 1px solid rgb(224, 224, 224);
+    box-shadow: 0px 4px 8px 0px rgba(143, 143, 143, 0.2);
+  }
+  #location span i{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 10px;
+  }
+
+  #location .currentLoc{
+    color: #233a95;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+#location:hover{
+  box-shadow: 0px 4px 8px 0px rgba(57, 57, 57, 0.2);
+}
+/* Burada seyfenin yuxarisindaki search bolumu */
+.search #navbarSearch{
+  position: relative;
+  padding: 18px 10px;
+  width: 553px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f3f4f7;
+  outline: none;
+}
+.search{
+position: relative;
+}
+/* searchin iconu */
+.search .zoom{
+position: absolute;
+top: 18px;
+right: 20px;
+font-size: 25px;
+color: rgb(49, 49, 49);
+}
+
+.searchModal #modalSearch{
+  position: relative;
+  margin-top: 25px;
+  padding: 18px 38px;
+  width: 360px;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f3f4f7;
+  font-weight: 100;
+}
+.searchModal .zoom{
+position: absolute;
+top: 65px;
+left: 20px;
+font-size: 20px;
+color: rgb(52, 52, 52);
+}
+/* Sebetin yanindaki user iconu */
+.allAccount{
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+/* Sebetin icerisi */
+.count{
+  position: relative;
+  display: flex;
+  left: -45px;
+}
+/* Sebetin daxilindeki valyuta */
+.count .dollar{
+  position: relative;
+  top: 12px;
+  left: -15px;
+  font-family:"Dosis",sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+/* Sebet mentiqi */
+.basketBag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  position: absolute;
+  width: 0px;
+  max-width: 0px;
+  max-height: 0px;
+  min-height: 0px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 8px 0px rgba(57, 57, 57, 0.2);
+  border-radius: 10px;
+  top: 65px;
+  left: -160px;
+  z-index: 4;
+  opacity: 0;
+
+}
+/* qiymete hover eledikde acilan sebet pencere */
+.count:hover .basketBag{
+
+  -webkit-transition: opacity 0.2s ease-in-out;
+  width: 300px;
+  max-width: 350px;
+  max-height: 550px;
+  min-height: 250px;
+  opacity: 1;
+}
+/* Sebetin iconuna hover eledikde acilan sebet penceresi */
+.basketLogo:hover .basketBag{
+
+  -webkit-transition: opacity 0.2s ease-in-out;
+  width: 300px;
+  max-width: 350px;
+  max-height: 600px;
+  min-height: 250px;
+  opacity: 1;
+}
+
+/* Burada sebetin logosunu yaziriq */
+.basketLogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 3px;
+  margin-left: 10px;  
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgb(250, 226, 226);
+}
+.basketLogo i{
+ position: relative;
+ left:8.5px;
+}
+.basketLogo .counter{
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top:-10px;
+  right: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* Yene location hissesindeki seherler gelnede yaranan scrol */
+.modal-body{
+  width: 420px;
+  overflow-y: scroll;
+}
+.modal-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* delivery location textini css kodu */
+.modal-title{
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+  left: -65px;
+  margin: 15px;
+}
+.modal-header .container{
+  position: relative;
+}
+
+/* All categorisin icerisindeki css kodlari */
+.allTexts{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 35px;
+  line-height: 35px;
+  top: 70px;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  z-index: 3;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* Mehsullarin icerisi */
+.nextText{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 35px;
+  line-height: 35px;
+  top: 70px;
+  left:275px ;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  z-index: 3;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+/* Link verilmis formalari */
+.allTexts a{
+  font-family: "inter",sans-serif;
+  font-size: 13px;
+  color: #747b93;
+  transition: 0.2s;
+}
+.allTexts a:hover{
+color:#00c8ff
+}
+.allTexts i{
+  margin-right: 10px;
+}
+.nextText:hover .textMenu .nextTexts{
+  -webkit-transition: height 0.3s ease-out;
+  width: 268px;
+  height: 517px;
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown:hover .allTexts{
+  -webkit-transition: height 0.3s ease-out;
+  width: 268px;
+  height: 517px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.categor i span{
+  font-family:"Dosis",sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.totalProduct{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  width: 101px;
+  height: 18px;
+  background-color:#f3f4f7;
+  border: 1px solid white;
+  border-radius: 25px;
+}
+.totalProduct span{
+  font-family:"Dosis",sans-serif;
+  font-size:10px;
+  color: #2c2c2c;
+}
+/* Navbar bolumunun css kodlari */
+.navbarMenu{
+  font-family:"Dosis",sans-serif;
+  color: #2c2c2c;
+}
+  
+.navbarMenu .home:hover{
+background-color: #f3f4f7;
+transition: 0.4s;
+}
+
+.home{
+  display: block;
+  color: rgb(59, 59, 59);
+  border: none;
+  background-color: #ffffff;
+}
+
+
+.home-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  width:0;
+  height:0;
+  margin-top:16px;
+  padding: 0;
+  position: absolute;
+  left: -55px;
+  top: 49px;
+  background-color: white;
+  z-index: 3;
+  transition:height 0.5s ease-in-out;
+  transition-delay: 1ms;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0;
+  border-radius: 5px;
+  border: 1px solid rgb(228, 228, 228);
+  line-height: 40px;
+  overflow: hidden;
+
+}
+
+.shope-content{
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction:row;
+  visibility: hidden;
+  width:0;
+  height:0;
+  margin-top:16px;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 241px;
+  background-color: white;
+  z-index: 3;
+  transition:height 0.5s ease-in-out;
+  transition-delay: 0ms;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0;
+  border-radius: 5px;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  padding: 30px 174px 30px;
+  font-size: 13px;
+  font-family: "inter",sans-serif;
+}
+
+.shope-content li{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.shope-content li a{
+  color: #717171;
+  font-weight: 500;
+}
+
+.shope-content a{
+  transition: 0.3s;
+}
+.homes{
+  width: 100px;
+  height: 75px;
+  padding-bottom: -500px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.shopes{
+  width: 100px;
+  height: 75px;
+  padding-bottom: -500px;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.home-content a {
+  padding: 6px 35px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-family:"Dosis",sans-serif;
+  color: #525252;
+  padding-left: -50px;
+}
+.home-content a:hover{
+  color: #00c8ff;
+}
+.shope-content a:hover{
+  color: #00c8ff;
+}
+.homes:hover .home{
+  color: #2bbef9;
+  background-color: #f0f6ff;
+}
+.shopes:hover .home{
+    color: #2bbef9;
+    background-color: #f0f6ff;
+  
+}
+.shopes:hover .shope-content{
+  -webkit-transition: opacity 0.2s ease-in-out;
+  visibility: visible;
+   opacity: 1;
+   width: 100%;
+   height: 320px;
+}
+.homes:hover .home-content{
+
+  -webkit-transition: opacity 0.2s ease-in-out;
+   opacity: 1;
+   height: 220px;
+   width: 200px;
+}
+/* Yan yana olan iki slaydi yazirqi burada */
+ .swiper {
+  width: 100%;
+  height: 460px;
+}
+
+ .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.contains{
+  position: absolute;
+  width:33%;
+  height: 100%;
+  left: 10%;
+}
+
+
+/* <!-- Cedvel icerisinde olan 9 mehsullarin kodlari --> */
+.foodProduct .itemProduct{
+  display: flex;
+  flex-direction: column;
+  width: 232px;
+  height: 290px;
+  padding: 10px;
+  border: 1px solid #ececec;
+  background-color: white;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.itemProduct img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Burada uje mehsullari columlar neticesinde cedvele yigiriq */
+.grossProducts .row .col{
+  width: 249px;
+  height: 145px;
+  border: 1px solid #ececec;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.grossProducts .row .col img{
+  width: 70px;
+  height: 70px;
+}
+.grossProducts .row .col .productData{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 8px;
+  line-height: 17px;
+}
+.grossProducts .row .col .productData .category a{
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "dosis"sans-serif;
+  color: black;
+}
+.grossProducts .row .col .productData .amount{
+  margin-top: 5px;
+  font-size: 13px;
+  text-align: left;
+  font-family: "dosis"sans-serif;
+}
+/* Burada sekilli saat mentiqini yaziriq */
+.clockTime .clockProduct{
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  height: 744px;
+  padding: 0px 15px;
+  border: 2px solid #ed174a;
+  background-color: white;
+  border-radius: 10px;
+}
+/* 19% iconun css kodlari */
+.clockTime .clockProduct .sale{
+  width: 80px;
+  height: 80px;
+  background-color: #ed174a;
+  border-radius: 50%;
+  position: relative;
+  top: 80px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  font-weight: 600;
+  color: white;
+}
+/* Saattin yanindaki mehsullar */
+.clockTime .mixProducts{
+  width: 780px;
+  height: 797px;
+  padding: 0px 15px;
+}
+.clockTime .mixProducts .row .col .productDatas .category a{
+  color:#2c2c2c;
+
+}
+.clockTime .mixProducts .row .col .productDatas .category a:hover{
+  transition: 0.5s;
+  color: rgb(50, 2, 206);
+}
+
+.clockTime .mixProducts .row{
+  padding:0px 20px;
+  border-radius: 10px;
+  
+}
+.clockTime .mixProducts .row .col{
+  width: 249px;
+  height: 372px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  position: relative;
+  transition: 0.3s;
+}
+.clockTime .mixProducts .row .col a img{
+  width: 180px;
+  height: 187px;
+}
+
+
+#watchtime li{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ed174a;
+  color: white;
+  font-family:"dosis",sans-serif;
+  font-size: 20px;
+  margin: 0px 5px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#watchtime .points{
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+.allSale{
+  width: 43px;
+  height: 25px;
+  background-color: #00c8ff;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "dosis",sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.recommend{
+  width: 90px;
+  height: 25px;
+  background-color: #a0a0a0;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "dosis",sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+ .addCart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  border-radius: 25px;
+  background-color: #233a95;
+  color: white;
+  bottom: -30px;
+  left: 20px;
+  height: 30px;
+  opacity: 0;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "dosis",sans-serif;
+}
+ .updateCard{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: -40px;
+  left: -1px;
+  background-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-color: #d0d0d0;
+  border-width: 0px 1px 1px;
+  border-radius: 0px 0px 10px 10px;
+  width: 246.8px;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding: 5px;
+}
+
+.existItem .plus:hover{
+  box-shadow: 0px 0px 4px 0px rgb(169, 225, 173);
+}
+ .typeOff{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #c0c0c051;
+  box-shadow: 0px 0px 4px 0px rgb(228, 228, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: 0.2s;
+  font-size: 14px;
+  opacity: 0;
+  background-color: white;
+}
+
+.clockTime .mixProducts .row .col:hover {
+  border-color: #d1d1d1;
+  box-shadow: 0px 1px 8px 8px rgba(218, 218, 218, 0.2);
+  border-radius: 10px 10px 0px 0px;
+  z-index: 1;
+
+}
+.clockTime .mixProducts .row .col:hover .addCart{
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+.clockTime .mixProducts .row .col:hover .updateCard {
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+ .addCart:hover{
+  box-shadow: 0px 0px 8px 3px rgba(52, 155, 200, 0.404);
+
+}
+.clockTime .mixProducts .row .col:hover .icon{
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+.clockTime .mixProducts .row .col:hover .figure{
+  text-align: center;
+  -webkit-transition: opacity 0.7s ease-in-out;
+   opacity: 1;
+}
+.typeOff:hover{
+  background-color: #233a95;
+  color: white;
+}
+
