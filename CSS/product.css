@@ -10,6 +10,7 @@ body{
 }
 a{
   text-decoration: none;
+  color:black;
 }
 /* About,wislis bollumu */
 li{
@@ -527,153 +528,94 @@ transition: 0.4s;
    width: 200px;
 }
 
-  .recommend{
-    width: 90px;
-    height: 25px;
-    background-color: #a0a0a0;
-    color: white;
-    font-size: 12px;
-    font-weight: 500;
-    font-family: "dosis",sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    position: absolute;
-    top: 50px;
-    left: 20px;
-  }
-   .addCart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 190px;
-    border-radius: 25px;
-    background-color: #233a95;
-    color: white;
-    bottom: -30px;
-    left: 20px;
-    height: 30px;
-    opacity: 0;
-    font-size: 17px;
-    font-weight: 500;
-    font-family: "dosis",sans-serif;
-  }
-   .updateCard{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: -40px;
-    left: -1px;
-    background-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-color: #d0d0d0;
-    border-width: 0px 1px 1px;
-    border-radius: 0px 0px 10px 10px;
-    width: 246.8px;
-    height: 55px;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    padding: 5px;
-  }
-  
-  .existItem .plus:hover{
-    box-shadow: 0px 0px 4px 0px rgb(169, 225, 173);
-  }
-   .typeOff{
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid #c0c0c051;
-    box-shadow: 0px 0px 4px 0px rgb(228, 228, 228);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    transition: 0.2s;
-    font-size: 14px;
-    opacity: 0;
-    background-color: white;
-  }
-  
 
-.saveBanner{
-    width:1175px;
-    height:64px;
-    background-color: #fbeacf;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 2px;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: "inter",sans-serif;
-    border-radius: 8px;
-  }
-  
-  .manyProducts .container .row{
-    width: 1200px;
-    height: 736px;
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .manyProducts .container .row .col{
-    border:1px solid #ECECEC;
-    min-width: 234px;
-    max-width: 234px;
-    height: 368px;
+.famousProduct .col .prices #plus:hover{
+   background-color: rgb(238, 255, 0);
+}
+.famousProduct .col .prices #minus:hover{
+   background-color: rgb(238, 255, 0);
+}
+.famousProduct .col .prices .addcart:hover{
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 20px;
-    position: relative;
+   opacity: 0.75;
+}
+.category li span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sosial-media li:hover{
+    opacity: 0.75;
+    cursor: pointer;
     transition: 0.3s;
-  }
-  
-  .manyProducts .container .row .col a img{
-    width: 180px;
-    height: 187px;
-  }
-  
-  
-  
-  
-  .manyProducts .row .col:hover {
-    border-color: #d1d1d1;
-    box-shadow: 0px 1px 8px 8px rgba(218, 218, 218, 0.2);
-    border-radius: 10px 10px 0px 0px;
-    z-index: 1;
-  
-  }
-  .manyProducts  .row .col:hover .addCart{
-    color: #FFFFFF;
-    text-align: center;
-    -webkit-transition: opacity 0.3s ease-in-out;
-     opacity: 1;
-  }
-  .manyProducts .row .col:hover .updateCard {
-    color: #FFFFFF;
-    text-align: center;
-    -webkit-transition: opacity 0.3s ease-in-out;
-     opacity: 1;
-  }
-  
-  .manyProducts .row .col:hover .icon{
-    text-align: center;
-    -webkit-transition: opacity 0.3s ease-in-out;
-     opacity: 1;
-  }
-  .manyProducts .row .col:hover .figure{
-    text-align: center;
-    -webkit-transition: opacity 0.7s ease-in-out;
-     opacity: 1;
-  }
+}
+.bestSellers .container .row .col{
+  border:1px solid #ECECEC;
+  max-width: 234px;
+  height: 400px;
+  position: relative;
+
+}
+
+.bestSellers .row .col .typeOff{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0px 0px 4px 0px rgb(228, 228, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: 0.2s;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.bestSellers .row .col:hover .icon{
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+.bestSellers .row .col:hover .figure{
+  text-align: center;
+  -webkit-transition: opacity 0.7s ease-in-out;
+   opacity: 1;
+}
+.bestSellers.row .col .typeOff:hover{
+  background-color: #233a95;
+  color: white;
+}
+.bestSellers .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #ECECEC;
+  box-shadow: 0px 0px 8px 2px rgba(187, 187, 187, 0.204);
+  z-index: 1;
+}
+
+.bestSellers .preview{
+  top: 250px;
+  left: -20px;
+}
+.bestSellers .preview:hover{
+  box-shadow: 0px 0px 8px 4px rgba(187, 187, 187, 0.362);
+}
+.bestSellers .next{
+  top: 250px;
+  right:-20px;
+}
+.bestSellers .next:hover{
+  box-shadow: 0px 0px 8px 4px rgba(187, 187, 187, 0.362);
+}
 
 /* Buradan footer bolumunu yaziriq */
 footer .discount-background {
